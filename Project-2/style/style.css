@@ -1,0 +1,2704 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* set background color for class abc  in the body */
+.abc{
+  background-color: white;
+}
+/* set font-family, background color , height and width */
+body {
+  font-family: sans-serif;
+  width: 100%;
+  margin: 0; 
+  background-color: #000;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+/* css for header */
+header {
+  position: relative;
+  /* Sets the header at the top of the page. */
+  top: 0;
+  left: 0;
+  /* Spans the full width of the viewport. */
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  /* Spreads elements evenly */
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+ 
+}
+
+/* Navigation Styles */
+nav[role="navigation"] {
+  display: flex;
+/* Align items at centre */
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+nav li {
+  display: flex; 
+  align-items: center; 
+  position: relative;
+  /* Set margin */
+  margin: 0 20px;
+}
+
+ /* Set color, font size, font family */
+nav a {
+  color: #f6f7f8;
+  font-size: 1.5rem;
+  height: 55px;
+  font-family: Figtree;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 17px;
+  border-radius: 2px;
+  transition: background 0.4s;
+}
+
+/* Hover Effect */
+nav a:hover {
+  background: #444444;
+}
+
+/* Line Container Styles */
+.line-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   /* Adds spacing to the left. */
+  margin-left: 10px; 
+}
+/*set height, width, background color of line class*/
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #f6f7f8;
+  margin: 3px 0;
+}
+
+/* Submenu Styles */
+.submenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+/* Positions the submenu directly below the parent menu item. */
+  top: 100%;
+  left: 0;
+  /* gradient background */
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 5px;
+  padding: 15px 0;
+  z-index: 999;
+}
+
+nav li:hover .submenu {
+  display: flex;
+}
+
+/* Submenu Item Styles */
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  /* Set the color of text */
+  color: #f6f7f8;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+/* Submenu Link Hover Effect */
+.submenu a:hover {
+  background: #444444;
+}
+.line{
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Logo Styles */
+header img {
+  /*set height and width of image of logo*/
+  height: 50px; 
+  width: auto; 
+  margin-right: 20px; 
+}
+
+/* Horizontal Line Styles */
+.header-line {
+  position: absolute; 
+  top: 95px; /* Adjust as needed */
+  display: grid;
+  grid-template-columns: 90% 10%;
+   /* Ensures the line spans the full width of the viewport. */
+  width: 100%;
+  border: none;
+  height: 2px;
+  /* set background color */
+  background-color: hsl(0, 100%, 100%);
+  z-index: 999;
+}
+
+/* Creates a line before the header content. */
+.header-line::before {
+  content: "";
+  grid-column: 1;
+  height: 2px;
+  /* Colors the line white. */
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* Video Background Styles */
+.vibg {
+  position: relative;
+  height: 100vh; 
+  overflow: hidden;
+}
+/* Set height and width of video*/
+.vibg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styles a text overlay positioned on top of the video background. */
+.text {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+  text-align: left;/* color of text */
+  z-index: 1; 
+  padding-left: 50px; 
+}
+
+/* Headings Styles */
+.text h1 {
+  font-size: 3em;
+  margin-top: 110px; 
+  font-family: Karla;
+}
+/* for h2 */
+.text h2 {
+  margin: 0;
+  font-size: 5em;
+  margin-top: 80px; 
+}
+/* for h3*/
+.text h3 {
+  margin: 0;
+  font-size: 3em;
+  margin-top: 70px; 
+}
+/* css for world class */
+.world {
+  margin: 40px 0; 
+  padding: 50px; 
+}
+/* CSS for paragraph 1 in world class */
+.world .p1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 4rem;
+  color: #b4ebef; 
+  line-height: 1.2;
+  margin-bottom: 50px; }
+/* CSS for paragraph 2 in world class */
+.world .p2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%); 
+  line-height: 1.5; 
+}
+/* CSS for below class */
+.below {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.below .box {
+  position: relative;
+  display: inline-block; 
+}
+/* Set width and set height as auto for image in below class*/
+.below img {
+  max-width: 60%;
+  height: auto;
+  /* Use of clip-path */
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  display: block;
+  margin: 0 auto; 
+  transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+/* CSS for hover-text */
+.below .hover-text {
+  position: absolute; 
+  bottom: 10px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  color: white;
+  font-size: 1.5rem;/* Set size of font */
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.below .box:hover .hover-text {
+  opacity: 1; 
+}
+
+.below:hover img {
+  opacity: 0.4; 
+  /* Slightly enlarges the image for a zoom effect. */
+  transform: scale(1.05); 
+}
+.feature{
+align-items: center;
+/* Set color to purple */
+color: purple;
+font-size: 1.5rem;
+}
+/* News Section */
+.news {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  align-items: center;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto; 
+}
+/* CSS for h3 tag in news class */
+.news h3 {
+  font-size: 0.7rem;
+}
+/* CSS for h2 tag in news class */
+.news h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* CSS for image in news class */
+.news img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+/* CSS for paragraph in news class */
+.news p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+/* CSS for esports class*/
+.esports {
+  padding: 5px 0;
+  /* Set background color as white and text black*/
+  background-color: #ffffff;
+  color: #000000; 
+  padding: 20px;
+  max-width: 100%; 
+  overflow: hidden;
+  text-align: center;/* Aligns text at centre */
+}
+/* CSS for image in esports class */
+.esports img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+/* CSS for h2 in esports class */
+.esports h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+/* CSS for parapgraph in esports class */
+.esports p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+
+
+
+
+/* responsive at 1024 px*/
+
+@media (max-width: 1024px) {
+  body {
+    padding: 10px; 
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    padding: 10px; 
+  }
+
+  .text h1, .text h2, .text h3 {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  .below img {
+    max-width: 80%; 
+  }
+}
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px; 
+  }
+
+  .text h1 {
+    font-size: 1.8rem;
+  }
+
+  .text h2 {
+    font-size: 2.5rem;
+  }
+
+  .text h3 {
+    font-size: 1.8rem;
+  }
+
+  .world .p1 {
+    font-size: 2.5rem; 
+  }
+
+  .world .p2 {
+    font-size: 1.5rem; 
+  }
+
+  .below img {
+    max-width: 90%; 
+  }
+}
+
+/* For devices with a max width of 420px (mobile devices) */
+@media (max-width: 420px) {
+  body {
+    padding: 5px; 
+  }
+
+  nav ul {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  nav a {
+    font-size: 1rem; 
+    padding: 5px; 
+  }
+
+  .text {
+    padding-left: 10px; 
+  }
+
+  .text h1, .text h2, .text h3 {
+    font-size: 1.5rem; 
+    margin-top: 20px;
+  }
+
+  .world .p1 {
+    font-size: 1.8rem; 
+  }
+
+  .world .p2 {
+    font-size: 1.2rem; 
+  }
+
+  .below img {
+    max-width: 100%; 
+  }
+
+  .news, .esports {
+    padding: 10px; 
+  }
+
+  .news h2, .esports h2 {
+    font-size: 1.5rem; 
+  }
+
+  .news p, .esports p {
+    font-size: 1rem;
+  }
+}
+/* home page ends */
+
+
+
+
+/* models page */
+.contenta {
+  /* Set line height */
+  line-height: 2;
+  /* Make text bold */
+  font-weight: bold;
+  padding: 25px;
+  position: relative; 
+  z-index: 1; 
+  /* Gradient color */
+  color: hwb(30 7% 93%); 
+  text-align: left; 
+  font-size: 1.3rem;
+  text-shadow: 4px 3px 4px #e60e0eb3;
+  /* Set font-family */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* CSS for bg class */
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden; 
+}
+/* CSS for background image class */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Covers the whole screen*/
+  object-fit: cover; 
+  z-index: 0; 
+}
+/* CSS for flex class */
+.flex {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  padding: 40px; 
+  position: relative;
+  z-index: 1; 
+}
+/* CSS for model class */
+.model {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  /* Aligns text at centre*/
+  text-align: center; 
+  color: white;
+  margin: 10px; 
+  flex: 1 1 200px; 
+}
+/* Set height and width of image in model class */
+.model img {
+  width: 100%; 
+  height: auto; 
+  /* Round borders */
+  border-radius: 10px; 
+  /* Adds smooth transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+/* Hover effect for images */
+.model img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); 
+}
+/* Styling for Unordered List in the Model Section */
+.model ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0 0 10px 0; 
+}
+/* Styling for List Items */
+.model li {
+  margin: 5px 0; 
+}
+
+.model a {
+  /* Set text color to white*/
+  color: white; 
+  text-decoration: none; 
+  padding: 5px 10px; 
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  /* Adds blusish shadow */
+  text-shadow: 4px 3px 4px #0e3de6b3;
+}
+/* Hover Effect for Links */
+.model a:hover {
+  background: rgba(216, 7, 7, 0.2);
+  font-size: 1rem;
+}
+
+/* responsive */
+/* For devices with a max width of 1024px */
+@media (max-width: 1024px) {
+  .contenta {
+    font-size: 1.1rem; 
+    padding: 20px;
+    text-align: center; 
+  }
+
+  .flex {
+    flex-wrap: wrap;
+    padding: 20px; 
+  }
+
+  .model {
+    flex: 1 1 45%; 
+    margin: 10px; 
+  }
+
+  .model img {
+    border-radius: 8px; 
+  }
+}
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+  .contenta {
+    font-size: 1rem; 
+    padding: 15px; 
+  }
+
+  .flex {
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 15px; 
+  }
+
+  .model {
+    flex: 1 1 100%; 
+    margin: 10px 0; 
+  }
+
+  .model img {
+    width: 90%; 
+    margin: 0 auto; 
+  }
+}
+
+@media (max-width: 420px) {
+  /* Content section adjustments */
+  .contenta {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Background image */
+  .background-image {
+    object-fit: cover;
+    height: auto;
+  }
+
+  /* Flex container adjustments */
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Model adjustments */
+  .model {
+    flex: 1 1 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .model img {
+    width: 100%;
+    height: auto;  
+    max-width: 100%; 
+    border-radius: 8px; 
+  }
+
+  /* Link adjustments for models */
+  .model a {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    background: rgba(216, 7, 7, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Footer adjustments */
+  .footer-columns {
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px;
+  }
+
+  .footer-column {
+    width: 100%; 
+    margin-bottom: 10px; 
+    text-align: center; 
+  }
+
+  .footer-column h3 {
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul {
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin: 5px 0; 
+    font-size: 0.9rem; 
+  }
+
+  .footer-bottom {
+    padding: 10px 0; 
+    font-size: 0.8rem; 
+  }
+
+  .footer-column ul li a {
+    font-size: 0.9rem; 
+    padding: 5px 10px;
+  }
+}
+
+
+/* models pages end*/
+
+/* hover button */
+.bt{
+left: 50%;
+margin-left: 700px;
+}
+button {
+  background-color: hwb(0 9% 14%);
+  color: rgb(255, 254, 254);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ left: 40%;
+}
+
+button:hover {
+  background-color: hsl(0, 100%, 49%); 
+  transform: scale(1.05); 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+  color: #003300; 
+}
+
+
+/* huracan page */
+
+/* Background Section Styling for Huracan Page */
+.bgh {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+/* Content Section Styling */
+.contenth {
+  position: relative;
+  z-index: 1; 
+  padding: 20px; 
+}
+
+/* CSS for h1 tag in titleh class */
+.titleh h1 {
+  /* Set font size */
+  font-size: 5rem; 
+  /* Make the text bold */
+  font-weight: bold;
+  /* Make text red color */
+  color: #f60000; 
+  text-align: center; 
+  text-shadow: 4px 3px 4px #0e3de6b3;
+  padding: 25px;
+}
+.titleh span {
+  font-size: 4rem;
+  color: hsl(0, 1%, 29%);
+  text-shadow: 4px 3px 4px hsla(0, 0%, 99%, 0.963);
+}
+/* CSS for info class */
+.info {
+  display: flex;
+  flex-direction: column; 
+  z-index: 1;
+  padding-top: 470px;
+}
+/* CSS for info-row class */
+.info-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 2rem; 
+  color: hsl(0, 0%, 97%);
+  text-shadow: 4px 3px 4px hwb(0 15% 15% / 0.963);
+  padding: 10px;
+}
+/* CSS for paragraph in info-row class */
+.info-row p {
+  flex: 1; 
+  text-align: center; 
+}
+.flexx.h {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  /* Align items in the centre */ 
+  align-items: center;
+  height: 300px;
+}
+/* Css for hname class */
+.hname {
+  font-size: 8rem; 
+  /* Set the color of text */
+  color: hsl(0, 1%, 43%);
+  /* Italic style */
+  font-style: italic;
+  /* Set font weight */
+  font-weight: 400;
+  /* Change font family */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  opacity: 0.5;
+  z-index: 1; 
+  padding: 50px;
+  text-shadow: 4px 3px 4px hwb(0 2% 98% / 0.963);
+}
+/* CSS for png image in huracan page */
+.hpng {
+  position: absolute;
+  z-index: 2; 
+  width: 180%; 
+  top: 110%; 
+  left: 145%;
+  transform: translate(-50%, -20%);
+}
+/* CSS for png image in huracan page */
+.hpng img {
+  width: 100%; 
+  max-width: 500px; 
+  border-radius: 50px;;
+  
+}
+/* Flexbox for design section */
+.design-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Text content on the left side */
+.design-section .text-content {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* CSS for designname class */
+.designname {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  /* Set bottom margin */
+  margin-bottom: 10px;
+}
+/* Css for text */
+.design-text {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+/* Image on the right side */
+.design-section .himg2 {
+  width: 50%; 
+}
+/* For the image in the design section */
+.design-section .himg2 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 30% 0 30% 0; 
+  transform: rotate(3deg); 
+  transition: transform 0.3s ease;
+}
+/* CSS for image hover */
+.design-section .himg2 img:hover {
+  transform: rotate(0deg); 
+}
+/* Flexbox for part2 */
+.part2 {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+}
+/* Image on the left side (himg2) */
+.himg2 {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* CSS for image */
+.himg2 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 0 0 50px 50px;
+  transform: rotate(-5deg); 
+  transition: transform 0.3s ease;
+}
+/* CSS for hover image */
+.himg2 img:hover {
+  transform: rotate(0deg); 
+}
+
+/* Text content on the right side */
+.text-content {
+  margin-left: 20px;
+  width: 50%; 
+}
+
+.intname {
+  /* Sets the font size to 2rem for better visibility. */
+  font-size: 2rem;
+  /* Make font bold */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.int {
+  font-size: 1.2rem;
+  color: #666;
+   /* Increases line height. */
+  line-height: 1.6;
+}
+.ext{
+  font-size: 1.2rem;
+  color: #666;
+   /* Increases line height. */
+  line-height: 1.6;
+}
+/* Part 3 Container Styling */
+.part3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* Adds margin around the container. */
+  margin: 20px;
+}
+.part3 .exname{
+  /* Sets the font size. */
+  font-size: 2rem;
+  /* Bold letters */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.part3 .text-content {
+  width: 50%;
+  margin-right: 20px; 
+}
+/* Paragraph Styling in Text Content */
+.part3 .text-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #000;
+}
+/* Image Container Styling in Part 3 */
+.part3 .himg3{
+  width: 50%;
+}
+
+.part3 .himg3 img {
+   /* Ensures the image covers the container. */
+  width: 100%; 
+  height: auto;
+  border-radius: 0 30% 0 30%; 
+  /* Applies a slight rotation. */
+  transform: rotate(3deg); 
+  transition: transform 0.3s ease;
+}
+/* Image Hover Effect */
+.part3 .himg3 img:hover {
+  transform: rotate(0deg);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); 
+}
+/* Part 4 Styling */
+.part4 {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 50px; 
+  /* Gradient Background */
+  background: linear-gradient(to right, black,black, white, black); 
+  color: #ffffff; 
+  font-size: 4rem; 
+  padding-bottom: 20px;
+  margin-bottom: 50px; 
+}
+/* Style for the image in part4 */
+.himg4 {
+  width: 50%; 
+  display: flex; 
+  justify-content: center; 
+}
+/* Image Styling inside .himg4 */
+.himg4 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 20px; 
+}
+/* Align text in the center */
+.part4 {
+  text-align: center;
+  margin-top: 40px; 
+}
+/* CSS for links */
+.link a {
+  color: white; 
+  text-decoration: none; 
+  padding: 5px 10px; 
+}
+/* CSS for hover effect */
+.link:hover {
+  background-color: darkblue; 
+  transform: scale(1.05); 
+}
+/* responsive */
+
+
+/* For devices with a max width of 1024px */
+@media (max-width: 1024px) {
+  .titleh h1 {
+    font-size: 3.5rem; 
+    padding: 15px; 
+  }
+
+  .titleh span {
+    font-size: 2.5rem; 
+  }
+
+  .info {
+    padding-top: 200px; 
+  }
+
+  .info-row {
+    font-size: 1.5rem;
+    flex-wrap: wrap; 
+  }
+
+  .hname {
+    font-size: 5rem; 
+  }
+
+  .hpng img {
+    max-width: 400px; 
+  }
+
+  .design-section {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .design-section .text-content,
+  .design-section .himg2 {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+}
+
+/* For devices with a max width of 768px */
+@media (max-width: 768px) {
+  .titleh h1 {
+    font-size: 3rem;
+  }
+
+  .info {
+    padding-top: 150px; 
+  }
+
+  .info-row {
+    flex-direction: column; 
+    font-size: 1.2rem; 
+  }
+
+  .hname {
+    font-size: 4rem; 
+  }
+
+  .hpng img {
+    max-width: 300px; 
+  }
+
+  .design-section .text-content,
+  .design-section .himg2 {
+    width: 100%; 
+  }
+
+  .part2, .part3, .part4 {
+    flex-direction: column; 
+  }
+
+  .part2 .himg2, .part3 .himg3, .part4 .himg4 {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+
+  .part3 .text-content {
+    font-size: 1.2rem; 
+    text-align: center; 
+  }
+}
+
+/* For devices with a max width of 420px (mobile) */
+@media (max-width: 420px) {
+  .titleh h1 {
+    font-size: 2.5rem; 
+    text-shadow: none;
+  }
+
+  .titleh span {
+    font-size: 2rem;
+  }
+
+  .info {
+    padding-top: 100px; 
+  }
+
+  .info-row {
+    font-size: 1rem; 
+    text-align: center; 
+  }
+
+  .hname {
+    font-size: 3rem; 
+    padding: 20px;
+  }
+
+  .hpng img {
+    width: 90%; 
+    max-width: none; 
+    border-radius: 20px; 
+  }
+
+  .design-section {
+    flex-direction: column; 
+    padding: 10px; 
+  }
+
+  .design-section .text-content,
+  .design-section .himg2 {
+    width: 100%;
+  }
+
+  .part2, .part3, .part4 {
+    flex-direction: column; 
+    padding: 10px; 
+  }
+
+  .part3 .text-content p {
+    font-size: 1rem; 
+  }
+
+  .link a {
+    font-size: 0.9rem; 
+    padding: 5px; 
+  }
+
+  .part4 {
+    font-size: 2rem; 
+  }
+
+  .part4 .himg4 img {
+    border-radius: 10px; 
+  }
+}
+
+/* huracan page ends */
+
+
+
+
+/* avedntor page */
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+/* CSS for background image in page */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 0; 
+}
+/* Content Styles */
+.contentx {
+  position: relative;
+  z-index: 1; 
+  padding: 20px; 
+}
+/* Title Styles */
+.title h1 {
+  font-size: 5rem; 
+  font-weight: bold;
+  color: #f60000; 
+  text-align: center; 
+  text-shadow: 4px 3px 4px #0e3de6b3;
+  padding: 25px;
+}
+.title span {
+  font-size: 4rem;
+  color: hsl(0, 1%, 29%);
+  text-shadow: 4px 3px 4px hsla(0, 0%, 99%, 0.963);
+}
+/* CSS for info class */
+.info {
+  display: flex;
+  flex-direction: column; 
+  z-index: 1;
+  justify-content: center; 
+  padding-top: 470px;
+}
+/* CSS for info-row class */
+.info-row {
+  display: flex; 
+  justify-content: space-around; 
+  width: 100%; 
+  font-size: 2rem; 
+  color: hsl(0, 0%, 97%);
+  text-shadow: 4px 3px 4px hwb(0 15% 15% / 0.963);
+  padding: 10px;
+}
+/* CSS for paragraph in info-row class */
+.info-row p {
+  flex: 1; 
+  text-align: center; 
+}
+.flexx.h {
+  position: relative; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 300px;
+}
+/* CSS for hname class */
+.hname {
+  /* Set font size and color */
+  font-size: 8rem;
+  color: hsl(0, 1%, 43%);
+  /* Italic fonts */
+  font-style: italic;
+  font-weight: 400;
+  /* Change font family */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  opacity: 0.5; 
+  z-index: 1; 
+  padding: 50px;
+  text-shadow: 4px 3px 4px hwb(0 2% 98% / 0.963);
+}
+/* CSS for png image */
+.hpng {
+  position: absolute; 
+  z-index: 2; 
+  width: 180%; 
+  top: 133%; 
+  left: 148%;
+  transform: translate(-50%, -20%); 
+}
+/* CSS for image in hpng class */
+.hpng img {
+  width: 100%; 
+  max-width: 500px; 
+  /* Rounded borders */
+  border-radius: 50px; 
+}
+/* Flexbox for design section */
+.design-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+}
+/* Text content on the left side */
+.design-section .text-content {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* CSS for designname class */
+.designname {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* CSS for text */
+.design-text {
+  font-size: 1.2rem;
+  color: #666;
+  /* Set line- height */
+  line-height: 1.6;
+}
+/* Image on the right side */
+.design-section .himg2 {
+  width: 50%; 
+}
+/* For the image in the design section */
+.design-section .himg2 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 30% 0 30% 0; 
+  /* Slightly rotate it */
+  transform: rotate(3deg); 
+  transition: transform 0.3s ease; 
+}
+/* Hover image */
+.design-section .himg2 img:hover {
+  transform: rotate(0deg); 
+}
+/* Flexbox for part2 */
+.part2 {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+}
+/* Image on the left side (himg2) */
+.himg2 {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* Set height, width, border radius for image in himg class */
+.himg2 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 0 0 50px 50px; 
+  transform: rotate(-5deg); 
+  transition: transform 0.3s ease;
+}
+/* Hover image */
+.himg2 img:hover {
+  transform: rotate(0deg);
+}
+/* Text content on the right side */
+.text-content {
+  margin-left: 20px; 
+  width: 50%; 
+}
+/* Set font size, make letters bold */
+.intname {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* CSS for int class */
+.int {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+/* CSS for part 3 */
+.part3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+/* Set font size, make it bold and set margin */
+.part3 .exname{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Styling for text content in part 3 */
+.part3 .text-content {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* Styling for paragraphs inside .text-content */
+.part3 .text-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #000;
+}
+/* Styling for the image container in part 3 */
+.part3 .himg3{
+  width: 50%;
+}
+/* Styling for the image inside .himg3 */
+.part3 .himg3 img {
+  width: 100%; 
+  height: auto;
+  border-radius: 0 30% 0 30%; 
+/* Slightly rotates the image */
+  transform: rotate(3deg); 
+  transition: transform 0.3s ease; 
+}
+/* Hover Image */
+.part3 .himg3 img:hover {
+  transform: rotate(0deg); 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); 
+}
+/* CSS for part 4 */
+.part4 {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 50px; 
+  /* Gradient background */
+  background: linear-gradient(to right, black,black, white, black); 
+  color: #ffffff; 
+  font-size: 4rem;
+  padding-bottom: 20px;
+  margin-bottom: 50px; 
+}
+/* Style for the image in part4 */
+.himg4 {
+  width: 50%; 
+  display: flex; 
+  justify-content: center; 
+}
+/* Styling for image in himg4 class*/
+.himg4 img {
+  width: 50%; 
+  height: auto; 
+  border-radius: 20px; 
+}
+.part4 {
+  text-align: center; 
+  margin-top: 40px; 
+}
+/* for links */
+.link a {
+  color: white;
+  text-decoration: none; 
+  padding: 5px 10px;
+}
+/* Hiver effect for link */
+.link:hover {
+  background-color: darkblue; 
+  transform: scale(1.05); 
+}
+
+/* responsive */
+
+
+/* Responsive Design for Screens 1024px and Smaller */
+@media (max-width: 1024px) {
+  .title h1 {
+    font-size: 4rem; 
+  }
+
+  .title span {
+    font-size: 3rem; 
+  }
+
+  .info-row {
+    flex-direction: column; 
+    font-size: 1.5rem; 
+    padding: 5px;
+  }
+
+  .hname {
+    font-size: 6rem; 
+  }
+
+  .hpng {
+    top: 120%; 
+    left: 50%;
+    transform: translate(-50%, -10%); 
+    width: 100%; 
+  }
+
+  .design-section, .part2, .part3, .part4 {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding: 10px; 
+  }
+
+  .design-section .text-content,
+  .part2 .text-content,
+  .part3 .text-content {
+    width: 100%;
+    margin: 0; 
+  }
+
+  .himg2 img, .himg3 img, .himg4 img {
+    width: 80%; 
+  }
+
+  .part4 {
+    font-size: 3rem; 
+  }
+}
+
+/* Responsive Design for Screens 768px and Smaller */
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 3rem; 
+  }
+
+  .title span {
+    font-size: 2.5rem;
+  }
+
+  .info-row {
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .hname {
+    font-size: 5rem; 
+  }
+
+  .hpng {
+    top: 130%;
+    left: 50%;
+    width: 90%;
+  }
+
+  .design-section .text-content,
+  .part2 .text-content,
+  .part3 .text-content {
+    font-size: 1rem; 
+  }
+
+  .himg2 img, .himg3 img, .himg4 img {
+    width: 70%; 
+  }
+
+  .part4 {
+    font-size: 2.5rem;
+  }
+
+  .link a {
+    padding: 3px 8px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Design for Screens 420px and Smaller */
+@media (max-width: 420px) {
+  .bg {
+    height: auto; 
+  }
+
+  .title h1 {
+    font-size: 2.5rem;
+  }
+
+  .title span {
+    font-size: 2rem;
+  }
+
+  .info-row {
+    font-size: 1rem; 
+  }
+
+  .hname {
+    font-size: 4rem;
+  }
+
+  .hpng {
+    top: 140%;
+    width: 100%;
+  }
+
+  .design-section .text-content,
+  .part2 .text-content,
+  .part3 .text-content {
+    font-size: 0.9rem; 
+  }
+
+  .himg2 img, .himg3 img, .himg4 img {
+    width: 60%; 
+  }
+
+  .part4 {
+    font-size: 2rem; 
+    padding: 20px; 
+  }
+
+  .link a {
+    font-size: 1rem; 
+    padding: 2px 6px; 
+  }
+}
+
+/* avedntor page ends */
+
+
+
+/* veveno page */
+/* Background Styles */
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+/* For background image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 0;
+}
+/* Content Styles */
+.contentv {
+  position: relative;
+  z-index: 1; 
+  padding: 20px; 
+}
+/* Title Styles */
+.title h1 {
+  font-size: 5rem; 
+  font-weight: bold;
+  color: #f60000; 
+  text-align: center;
+  text-shadow: 4px 3px 4px #0e3de6b3;
+  padding: 25px;
+}
+.title span {
+  font-size: 4rem;
+  color: hsl(0, 1%, 29%);
+  text-shadow: 4px 3px 4px hsla(0, 0%, 99%, 0.963);
+}
+/* Styling for info class */
+.info {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: center;
+  padding-top: 470px;
+}
+/* Styling for info-row class */
+.info-row {
+  display: flex; 
+  justify-content: space-around; 
+  width: 100%;
+  /* Set font size */
+  font-size: 2rem; 
+  color: hsl(0, 0%, 97%);
+  text-shadow: 4px 3px 4px hwb(0 15% 15% / 0.963);
+  padding: 10px;
+}
+/* Styling for paragraph in info-row class */
+.info-row p {
+  flex: 1; 
+  text-align: center; 
+}
+.flexx.h {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 300px; 
+}
+/* For text */
+.aname {
+  /* Set font size, color, weight of text */
+    font-size: 7rem;
+    color: hsl(0, 1%, 43%);
+    font-style: italic;
+    font-weight: 300;
+    opacity: 0.5;
+    padding: 50px;
+    text-shadow: 4px 3px 4px hwb(0 2% 98% / 0.963);
+}
+/* CSS for png image */
+.apng {
+  position: absolute;
+    z-index: 2;
+    width: 150%;
+    top: 125%;
+    left: 140%;
+    transform: translate(-50%, -20%);
+}
+/* CSS for image in hpng class */
+.hpng img {
+  width: 100%; 
+  max-width: 500px;
+  /* Rounded borders */ 
+  border-radius: 50px; 
+}
+/* Flexbox for design section */
+.design-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+}
+/* Text content on the left side */
+.design-section .text-content {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* Styling for designname class */
+.designname {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* for text */
+.design-text {
+  font-size: 1.2rem;
+  color: #666;
+  /* Set line height */
+  line-height: 1.6;
+}
+.design-section .himg2 {
+  width: 50%; 
+}
+/* For the image in the design section */
+.design-section .himg2 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 30% 0 30% 0; 
+  transform: rotate(3deg); 
+  transition: transform 0.3s ease; 
+}
+/* Image hover */
+.design-section .himg2 img:hover {
+  transform: rotate(0deg); 
+}
+/* Flexbox for part2 */
+.part2 {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+}
+/* Image on the left side (himg2) */
+.himg2 {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* Styling for image in himg2 class */
+.himg2 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 0 0 50px 50px; 
+  transform: rotate(-5deg); 
+  transition: transform 0.3s ease; 
+}
+/* Hover image */
+.himg2 img:hover {
+  transform: rotate(0deg); 
+}
+/* Text content on the right side */
+.text-content {
+  margin-left: 20px;
+  width: 50%; 
+}
+/* Set font fize and make it bold */
+.intname {
+  font-size: 2rem;
+  font-weight: bold;
+  /* Set color and margin */
+  color: #333;
+  margin-bottom: 10px;
+}
+.int {
+  font-size: 1.2rem;
+  color: #666;
+  /* Set line height */
+  line-height: 1.6;
+}
+/* styling for part 3 Section */
+.part3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+.part3 .exname{
+  /* Bigger and bolder fonts  */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Style for text content in part 3 */
+.part3 .text-content {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* Styling for paragraphs inside the text content */
+.part3 .text-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #000;
+}
+/* Style for the image container in part 3 */
+.part3 .himg3{
+  width: 50%;
+}
+/* Styling for the image inside the container */
+.part3 .himg3 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 0 30% 0 30%;
+  transform: rotate(3deg); 
+  transition: transform 0.3s ease; 
+}
+/* Hover image */
+.part3 .himg3 img:hover {
+  transform: rotate(0deg); 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); 
+}
+/* Styling for part 4 Section */
+.part4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 50px; 
+  /* Linear background */
+  background: linear-gradient(to right, black,black, white, black); 
+  color: #ffffff; 
+  font-size: 4rem;
+  padding-bottom: 20px;
+  margin-bottom: 50px; 
+}
+/* Style for the image in part4 */
+.himg4 {
+  width: 50%; 
+  display: flex; 
+  justify-content: center; 
+}
+/* Styling for the image inside the container */
+.himg4 img {
+  width: 50%; 
+  height: auto; 
+  border-radius: 20px; 
+}
+/* All items in centre */
+.part4 {
+  text-align: center; 
+  margin-top: 40px; 
+}
+/* Styling for the link inside part 4 */
+.link a {
+  color: white; 
+  text-decoration: none; 
+}
+/* Hover effect for the link */
+.link:hover {
+  background-color: darkblue; 
+  transform: scale(1.05); 
+}
+
+/* responsive */
+/* Desktop screens up to 1024px */
+@media (max-width: 1024px) {
+  .title h1 {
+    font-size: 4rem; 
+  }
+  .title span {
+    font-size: 3rem;
+  }
+  .info-row p, .designname, .intname, .exname {
+    font-size: 1.8rem; 
+  }
+  .himg2 img, .himg3 img, .himg4 img {
+    width: 80%; 
+  }
+}
+
+/* Tablet screens up to 768px */
+@media (max-width: 768px) {
+ 
+  .info-row, .design-section, .part3 {
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .info-row p {
+    font-size: 1.6rem; 
+  }
+  .text-content, .himg2, .himg3, .himg4 {
+    width: 100%;
+  }
+  .title h1 {
+    font-size: 3rem;
+  }
+  .title span {
+    font-size: 2.5rem;
+  }
+  .hpng img, .apng img {
+    max-width: 80%; 
+  }
+}
+
+/* Mobile screens up to 420px */
+@media (max-width: 420px) {
+
+  .info-row, .design-section, .part3 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .title h1 {
+    font-size: 2.5rem; 
+  }
+  .title span {
+    font-size: 2rem;
+  }
+  .info-row p {
+    font-size: 1.2rem; 
+  }
+  .text-content, .himg2, .himg3, .himg4 {
+    width: 100%; 
+  }
+  .hpng img, .apng img {
+    max-width: 100%; 
+    border-radius: 20px;
+  }
+}
+
+/* veneno page  ends*/
+
+
+
+/* urus page  */
+
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+/* Styling for background image  */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 0;
+}
+/* Content Styles */
+.contentu {
+  position: relative;
+  z-index: 1; 
+  padding: 20px; 
+}
+/* Title Styles */
+.title h1 {
+  font-size: 5rem; 
+  font-weight: bold;
+  color: #f60000; 
+  text-align: center;
+  text-shadow: 4px 3px 4px #0e3de6b3;
+  padding: 25px;
+}
+.title span {
+  font-size: 4rem;
+  color: hsl(0, 1%, 29%);
+  text-shadow: 4px 3px 4px hsla(0, 0%, 99%, 0.963);
+}
+/* CSS for info class */
+.info {
+  display: flex;
+  flex-direction: column; 
+  z-index: 1;
+  justify-content: center; 
+  padding-top: 470px;
+}
+/* CSS for info-row class */
+.info-row {
+  display: flex;
+  justify-content: space-around; 
+  width: 100%;
+  font-size: 2rem;
+  color: hsl(0, 0%, 97%);
+  text-shadow: 4px 3px 4px hwb(0 15% 15% / 0.963);
+  padding: 10px;
+}
+/* CSS for paragraph in info class */
+.info-row p {
+  flex: 1; 
+  /* Aligns all the text at center */
+  text-align: center; 
+}
+.flexx.h {
+  position: relative; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 300px; 
+}
+/* CSS for text  */
+.hname {
+  /* Set font size */
+  font-size: 8rem; 
+  color: hsl(0, 1%, 43%);
+  /* Make it italic */
+  font-style: italic;
+  font-weight: 400;
+  /* Chamge font family */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  opacity: 0.5; 
+  z-index: 1;
+  padding: 50px;
+  text-shadow: 4px 3px 4px hwb(0 2% 98% / 0.963);
+}
+/* CSS for png image  */
+.hpng {
+  position: absolute; 
+  z-index: 2; 
+  width: 180%;
+  top: 133%; 
+  left: 148%; 
+  transform: translate(-50%, -20%); 
+}
+/* Styling for image in hpng class */
+.hpng img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 50px;
+}
+/* Flexbox for design section */
+.design-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+}
+/* Text content on the left side */
+.design-section .text-content {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* CSS for designname class */
+.designname {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Styling for text in design-text class */
+.design-text {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+/* Image on the right side */
+.design-section .himg2 {
+  width: 50%;
+}
+/* For the image in the design section */
+.design-section .himg2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 30% 0 30% 0;
+  transform: rotate(3deg); 
+  transition: transform 0.3s ease;
+}
+/* Image hover */
+.design-section .himg2 img:hover {
+  transform: rotate(0deg);
+}
+/* Flexbox for part2 */
+.part2 {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 20px;
+}
+/* Image on the left side (himg2) */
+.himg2 {
+  width: 50%; 
+  margin-right: 20px;
+}
+/* CSS for image in himg2 class */
+.himg2 img {
+  width: 100%;
+  height: auto; 
+  border-radius: 0 0 50px 50px;
+  transform: rotate(-5deg); 
+  transition: transform 0.3s ease;
+}
+/* Hover image*/
+.himg2 img:hover {
+  transform: rotate(0deg); 
+}
+/* Text content on the right side */
+.text-content {
+  margin-left: 20px; 
+  width: 50%; 
+}
+/* CSS for intname class */
+.intname {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Set the font size , line height and color for the text */
+.int {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+/* CSS for part 3 section */
+.part3 {
+  display: flex;
+  justify-content: space-between;
+  /* Align all items at the center */
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+.part3 .exname{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Style for text content in part 3 */
+.part3 .text-content {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* Styling for paragraphs inside the text content */
+.part3 .text-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #000;
+}
+/* CSS for the image container in part 3 */
+.part3 .himg3{
+  width: 50%;
+}
+/* Styling for the image inside part 3 */
+.part3 .himg3 img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 0 30% 0 30%;
+  transform: rotate(3deg); 
+  transition: transform 0.3s ease;
+}
+/* Image hover */
+.part3 .himg3 img:hover {
+  transform: rotate(0deg); 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); 
+}
+/* Style for part 4 */
+.part4 {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 50px; 
+  /* Gradient background */
+  background: linear-gradient(to right, black,black, white, black); 
+  color: #ffffff; 
+  font-size: 4rem; 
+  padding-bottom: 20px;
+  margin-bottom: 50px; 
+}
+/* Style for the image in part4 */
+.himg4 {
+  width: 50%;
+  display: flex; 
+  justify-content: center; 
+}
+/* Styling for the image inside part 4 */
+.himg4 img {
+  width: 50%; 
+  height: auto; 
+  border-radius: 20px; 
+}
+.part4 {
+  text-align: center; 
+  margin-top: 40px; 
+}
+/* CSS for the link in part 4 */
+.link a {
+  color: white; 
+  text-decoration: none;
+  padding: 5px 10px; 
+}
+/* hover effect to links */
+.link:hover {
+  background-color: darkblue; 
+  transform: scale(1.05); 
+}
+
+
+/* responsive*/
+/* For 1024px screens */
+@media (max-width: 1024px) {
+  /* Adjust title size */
+  .title h1 {
+    font-size: 4rem; 
+    padding: 15px; 
+  }
+  .title span {
+    font-size: 3rem; 
+  }
+
+  /* Info Section */
+  .info {
+    padding-top: 400px; 
+  }
+  .info-row {
+    font-size: 1.5rem; 
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  /* Flexbox Containers */
+  .design-section,
+  .part2,
+  .part3 {
+    flex-direction: row; 
+    align-items: flex-start; 
+  }
+
+
+  .design-section .text-content,
+  .part2 .text-content,
+  .part3 .text-content {
+    width: 45%;
+  }
+
+
+  .design-section .himg2 img,
+  .part2 .himg2 img,
+  .part3 .himg3 img {
+    width: 50%; 
+    max-width: 400px; 
+  }
+
+
+  .part4 {
+    padding: 30px;
+    font-size: 3rem; 
+  }
+  .part4 .himg4 img {
+    width: 80%; 
+  }
+}
+
+/* For Tablets (768px) */
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 3.5rem; 
+  }
+  .hname {
+    font-size: 6rem; 
+  }
+  .design-section, .part2, .part3 {
+    flex-direction: column; 
+  }
+  .design-section .text-content, 
+  .part2 .text-content, 
+  .part3 .text-content {
+    width: 100%; 
+    margin: 0; 
+  }
+  .himg2 img, .himg3 img {
+    width: 80%; 
+    margin: auto; 
+  }
+}
+
+/* For Mobile (420px) */
+@media (max-width: 420px) {
+  .title h1 {
+    font-size: 2.5rem;
+  }
+  .hname {
+    font-size: 4rem;
+  }
+  .info-row {
+    font-size: 1rem; 
+    flex-direction: column;
+  }
+  .design-section, .part2, .part3 {
+    flex-direction: column; 
+    padding: 10px; 
+  }
+  .design-section .himg2 img, 
+  .part2 .himg2 img, 
+  .part3 .himg3 img {
+    width: 90%; 
+    margin: auto;
+  }
+}
+
+/* urus page  ends*/
+
+
+/* contact page*/
+/* Set background color white and text color black */
+.b {
+  background-color: white;
+  color: black; 
+  padding: 20px;
+  min-height: 100vh;
+}
+.cont2 {
+  max-width: 800px;
+  margin: 0 auto;
+  /* Aligns text at center */
+  text-align: center;
+  line-height: 1.8;
+  color: black;
+}
+/* Styling for h2 inside cont2 class */
+.cont2 h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+/* Styling for horizontal line */
+.cont2 hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px auto;
+  width: 80%;
+}
+.himg2c {
+  width: 50%; 
+  margin-right: 20px; 
+}
+/* Styling for images inside .himg2c */
+.himg2c img {
+  width: 100%; 
+  height: auto;
+  /* Clip-path */
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+/* Contact container with background, padding, and box-shadow */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+/* Styling for the h1 inside the contact container */
+.contact-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+/* Flexbox layout for contact sections */
+.contact-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+/* Individual Contact Region */
+.contact-region {
+  flex: 1 1 calc(33.33% - 20px); 
+  background: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Styling for the h2 inside contact region */
+.contact-region h2 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+/* CSS for paragraphs inside each contact region */
+.contact-region p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+/* Styling for strong text inside contact region */
+.contact-region p strong {
+  color: #000;
+}
+
+/* responsive*/
+/* For 1024px screens */
+@media (max-width: 1024px) {
+
+  .cont2 h2 {
+    font-size: 1.8rem; 
+  }
+  
+  .contact-container {
+    padding: 15px; 
+  }
+
+  .contact-flex {
+    flex-direction: column; 
+    gap: 15px; 
+  }
+
+ 
+  .contact-region {
+    flex: 1 1 100%; 
+    padding: 15px;
+  }
+
+  .contact-region h2 {
+    font-size: 1.3rem; 
+  }
+
+  .contact-region p {
+    font-size: 1rem; 
+  }
+
+ 
+  .himg2c {
+    width: 100%;
+    margin-right: 0; 
+  }
+
+  .himg2c img {
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+  }
+}
+/* For 768px screens */
+@media (max-width: 768px) {
+  /* Contact Information Section */
+  .cont2 h2 {
+    font-size: 1.6rem; 
+  }
+
+  .contact-container {
+    padding: 10px; 
+  }
+
+  .contact-flex {
+    flex-direction: column;
+    gap: 12px; 
+  }
+ 
+  .contact-region {
+    flex: 1 1 100%;
+    padding: 12px; 
+  }
+
+  .contact-region h2 {
+    font-size: 1.2rem; 
+  }
+
+  .contact-region p {
+    font-size: 0.9rem; 
+  }
+
+  .himg2c {
+    width: 100%; 
+    margin-right: 0;
+  }
+
+  .himg2c img {
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
+  }
+}
+/* For 420px screens */
+@media (max-width: 420px) {
+  /* Contact Information Section */
+  .cont2 h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-container {
+    padding: 8px; 
+  }
+
+  .contact-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-region {
+    flex: 1 1 100%; 
+    padding: 10px; 
+  }
+
+  .contact-region h2 {
+    font-size: 1rem; 
+  }
+
+  .contact-region p {
+    font-size: 0.8rem; 
+  }
+
+  .himg2c {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .himg2c img {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 5%, 95% 100%, 5% 100%, 0% 95%);
+  }
+}
+
+
+/* contactpage  ends*/
+
+/* about  starts*/
+/* Styling for .cont3 container */
+.cont3 {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+  color: black;
+}
+/* CSS for h1 inside cont3 class */
+.cont3 h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.himg2a {
+  width: 80%; 
+  height: 100%;
+  margin-right: 10px; 
+}
+/* Styling for images inside .himg2a */
+.himg2a img {
+  width: 100%; 
+  height: auto;
+ /* Clip-path */
+  clip-path: circle(50% at 50% 50%);}
+
+
+/* Responsive */
+/* For 1024px screens */
+@media (max-width: 1024px) {
+  .cont3 {
+    max-width: 90%; 
+    padding: 20px; 
+  }
+
+  .cont3 h1 {
+    font-size: 1.8rem; 
+  }
+
+  .himg2a {
+    width: 100%; 
+    margin-right: 0;
+  }
+
+  .himg2a img {
+    clip-path: circle(45% at 50% 50%);
+  }
+}
+/* For 768px screens */
+@media (max-width: 768px) {
+  .cont3 {
+    max-width: 85%;
+    padding: 15px; 
+  }
+
+  .cont3 h1 {
+    font-size: 1.6rem; 
+  }
+
+  .himg2a {
+    width: 90%; 
+    margin-right: 0;
+  }
+
+  .himg2a img {
+    clip-path: circle(40% at 50% 50%);
+  }
+}
+/* For 420px screens */
+@media (max-width: 420px) {
+  .cont3 {
+    max-width: 100%;
+    padding: 10px; 
+  }
+
+  .cont3 h1 {
+    font-size: 1.4rem;
+  }
+
+  .himg2a {
+    width: 100%; 
+    margin-right: 0;
+  }
+
+  .himg2a img {
+    clip-path: circle(35% at 50% 50%);
+  }
+}
+
+
+
+/* about ends*/
+
+/* CSS for footer */
+footer {
+  /* Set backgroung color, text color */
+  background-color: #000; 
+  color: white;
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  padding: 20px 0;
+}
+/* CSS for the footer columns class */
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  text-align: left;
+}
+/* Styling for the h3 element inside each footer column */
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-family: Karla;
+}
+/* CSS for the unordered list inside footer columns */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+/* Styling for each list item in the footer column */
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+/* Styling for the links inside the list items */
+.footer-column ul li a {
+  color: #bbb;
+  text-decoration: none;
+}
+/* Hover effect for links inside footer columns */
+.footer-column ul li a:hover {
+  color: white;
+}
+/* Styling for the footer bottom section */
+.footer-bottom {
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* responsive */
+/* For 1024px screens */
+@media (max-width: 1024px) {
+  .footer-columns {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-column {
+    flex: 1 1 45%; 
+    margin-bottom: 20px; 
+  }
+
+  .footer-column h3 {
+    font-size: 1.5rem; 
+  }
+
+  .footer-column ul li {
+    font-size: 1rem; 
+  }
+
+  .footer-bottom {
+    padding: 15px 0; 
+  }
+}
+/* For 768px screens */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 80%; 
+    margin-bottom: 20px;
+  }
+
+  .footer-column h3 {
+    font-size: 1.4rem; 
+  }
+
+  .footer-column ul li {
+    font-size: 0.9rem; 
+  }
+
+  .footer-bottom {
+    padding: 12px 0; 
+  }
+}
+/* For 420px screens */
+@media (max-width: 420px) {
+  .footer-columns {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .footer-column {
+    width: 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .footer-column h3 {
+    font-size: 1.2rem; 
+  }
+
+  .footer-column ul li {
+    font-size: 0.85rem; 
+  }
+
+  .footer-bottom {
+    padding: 10px 0;
+  
+  }
+  }
